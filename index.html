@@ -970,49 +970,7 @@
         }
     </script>
     <script src="images/translator.txt"></script>
-    <script>
-        var getJSON = function(url, callback) {
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", url, true);
-            xhr.responseType = "json";
-            xhr.onload = function() {
-                var status = xhr.status;
-                if (status === 200) {
-                    callback(null, xhr.response);
-                } else {
-                    callback(status, xhr.response);
-                }
-            };
-            xhr.send();
-        };
 
-        document.addEventListener("DOMContentLoaded", (event) => {
-            getJSON("https://kishu-api.herokuapp.com/stats", function(err, data) {
-                if (err !== null) {
-                    console.log("Something went wrong: " + err);
-                } else {
-                    var kishu_stats = data;
-                    console.log(kishu_stats);
-                    document.getElementById("price").innerHTML = "$" + kishu_stats.kishuPriceUsdt.toFixed(10);
-                    document.getElementById("marketcap").innerHTML = "$" + (kishu_stats.kishuPriceUsdt * 100000000000).toFixed(1) + " Millions";
-                    // document.getElementById("holders").innerHTML = (kishu_stats.holders / 1000).toFixed(0) + ',000+';
-                }
-            });
-        });
-    </script>
-    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f15b829bff6e47db974ca22453af3f0f"}'></script>
-</body>
-
-</html> var kishu_stats = data; console.log(kishu_stats); document.getElementById("price").innerHTML = "$" + kishu_stats.kishuPriceUsdt.toFixed(10); document.getElementById("marketcap").innerHTML = "$" + (kishu_stats.kishuPriceUsdt * 100000000000).toFixed(1)
-+ " Millions"; // document.getElementById("holders").innerHTML = (kishu_stats.holders / 1000).toFixed(0) + ',000+'; } }); });
-</script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f15b829bff6e47db974ca22453af3f0f"}'></script>
-</body>
-
-</html> var kishu_stats = data; console.log(kishu_stats); document.getElementById("price").innerHTML = "$" + kishu_stats.kishuPriceUsdt.toFixed(10); document.getElementById("marketcap").innerHTML = "$" + (kishu_stats.kishuPriceUsdt * 100000000000).toFixed(1)
-+ " Millions"; // document.getElementById("holders").innerHTML = (kishu_stats.holders / 1000).toFixed(0) + ',000+'; } }); });
-</script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f15b829bff6e47db974ca22453af3f0f"}'></script>
 </body>
 
 </html>
